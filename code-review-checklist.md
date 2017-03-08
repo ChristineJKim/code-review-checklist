@@ -165,7 +165,3 @@ A guide for reviewing code and having your code reviewed.
 - [ ] Is the code formatted according to the conventions of the language?
 - [ ] Are the formatting conventions consistent?
 - [ ] Are the variable names reasonable?
-
-
-[QMS_info]: http://gin.bcgsc.ca/plone/groups/quality/bioinformatics-quality-assurance/documents
-[Whitepaper]: http://gin.bcgsc.ca/jira/secure/attachment/32569/WP-CC-11-Best-Practices-of-Peer-Code-Review.pdf
