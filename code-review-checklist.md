@@ -1,33 +1,12 @@
 # Code Review Checklist
+A guide for reviewing code and having your code reviewed.
 
 > <i>Given enough eyeballs, all bugs are shallow.</i>
 >
 > <cite>Linus' Law</cite>
 
-This document aims to be a community-maintained and flexible guide to code
-review. The goal is to provide a consistent set of code review practices while
-allowing individual groups the freedom to take whichever approach they feel is
-best suited to the task.
 
-Groups—or even individual developers—who use this guide may find it useful
-to fork this repository and make modifications and specific recommendations to
-suit their needs and preferences.
-
-The guide is in two parts: a **Code Review Best Pracice** section, which
-contains guidelines for being an effective reviewer, and a **Checklist**,
-which is a guide to the questions the reviewer should be asking about the
-code.
-
-The checklist is split into five sections, corresponding to what we believe to
-be the most important aspects of a piece of software to be covered by a code
-review. Developers should consider these aspects when conducting a code
-review, and should document their findings about these aspects of the software
-while reviewing.
-
-We feel that a the best way to ensure that the guide is relevant an useful is
-if it is continually maintained by the developers who *perform the reviews*.
-
-Remember, the purposes of a code review are:
+**Remember, the purposes of a code review are:**
 
 1. To improve the quality of the software
 2. To *document* that we have improved the quality of the software
@@ -37,6 +16,9 @@ Remember, the purposes of a code review are:
 ## Table of Contents
 
 * Code Review Best Practice
+    * Everyone
+    * Having Your Code Reviewed
+    * Reviewing Code
 
 * Checklist
     * Correctness
@@ -54,21 +36,46 @@ Remember, the purposes of a code review are:
 >
 > <cite>Winston Churchill</cite>
 
-As with the rest of this guide, best pracitce recommendations should come from
-the experinece of code reviewers. For some general guidelines to start with,
-see the SmartBear whitepaper [11 Best Practices for Peer Code Review][Whitepaper]
-(PDF).
+### Everyone
 
+* Accept that many programming decisions are opinions. Discuss tradeoffs, which you prefer, and reach a resolution quickly.
+* Ask good questions; don't make demands. ("What do you think about naming this :user_id?")
+* Good questions avoid judgment and avoid assumptions about the author's perspective.
+* Ask for clarification. ("I didn't understand. Can you clarify?")
+* Avoid selective ownership of code. ("mine", "not mine", "yours")
+* Avoid using terms that could be seen as referring to personal traits. ("dumb", "stupid"). Assume everyone is intelligent and well-meaning.
+* Be explicit. Remember people don't always understand your intentions online.
+* Be humble. ("I'm not sure - let's look it up.")
+* Don't use hyperbole or sarcasm. ("always", "never", "endlessly", "nothing")
+* Keep it real. If emoji, animated gifs, or humor aren't you, don't force them. If they are, use them with aplomb.
+* Talk synchronously (e.g. chat, screensharing, in person) if there are too many "I didn't understand" or "Alternative solution:" comments. Post a follow-up comment summarizing the discussion.
+
+### Having Your Code Reviewed
+
+ * Be grateful for the reviewer's suggestions. ("Good call. I'll make that change.")
+ * Don't take it personally. The review is of the code, not you.
+ * Explain why the code exists. ("It's like that because of these reasons. Would it be more clear if I rename this class/file/method/variable?")
+ * Push commits based on feedback as isolated commits to the branch. Reviewers should be able to read individual updates based on their feedback.
+ * Seek to understand the reviewer's perspective.
+ * Try to respond to every comment.
+
+### Reviewing Code
+ * Communicate which ideas you feel strongly about and those you don't.
+ * Identify ways to simplify the code while still solving the problem.
+ * If discussions turn too philosophical or academic, move the discussion offline. In the meantime, let the author make the final decision on alternative implementations.
+ * Offer alternative implementations, but assume the author already considered them.
+ * Seek to understand the author's perspective.
+ * Sign off on the pull request with a :+1: `:+1:` or "Ready to merge" comment.
+
+### Style Comments
+ * Reviewers should comment on missed style guidelines. Example comment:
+ ```
+ [Style](../style):
+
+> Order resourceful routes alphabetically by name.
+```
 
 ## Checklist
-
-It is a major goal of this document that all but the most general and
-best accepted guidelines should be derived from the *experience* of the code
-reviewers *who use these guidelines*. This will ensure that the checklist
-stays flexible, relevant and up to date.
-
-Items on the checklist should be phrased in terms of questions that the
-reviewer should ask him or herself about the code under review.
 
 
 ### Correctness
@@ -80,9 +87,9 @@ reviewer should ask him or herself about the code under review.
 
 #### Does the program do what it's supposed to do?
 
-* Is the output correct?
-* Are there circumstances under which the program will give the wrong output?
-* What assumptions does the program make about input?
+-[] Is the output correct?
+-[]  Are there circumstances under which the program will give the wrong output?
+-[]  What assumptions does the program make about input?
 
 
 ### Testing
