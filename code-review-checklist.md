@@ -26,7 +26,7 @@ A guide for reviewing code and having your code reviewed.
     * Documentation
     * Error Handling and Logging
     * Design
-
+----
 
 ## Code Review Best Practice
 
@@ -66,15 +66,8 @@ A guide for reviewing code and having your code reviewed.
  * Offer alternative implementations, but assume the author already considered them.
  * Seek to understand the author's perspective.
  * Sign off on the pull request with a :+1: `:+1:` or "Ready to merge" comment.
-
-### Style Comments
- * Reviewers should comment on missed style guidelines. Example comment:
- ```
- [Style](../style):
-
-> Order resourceful routes alphabetically by name.
-```
-
+ 
+---- 
 ## Checklist
 
 
@@ -87,9 +80,9 @@ A guide for reviewing code and having your code reviewed.
 
 #### Does the program do what it's supposed to do?
 
--[] Is the output correct?
--[]  Are there circumstances under which the program will give the wrong output?
--[]  What assumptions does the program make about input?
+- [ ] Is the output correct?
+- [ ] Are there circumstances under which the program will give the wrong output?
+- [ ]  What assumptions does the program make about input?
 
 
 ### Testing
@@ -102,9 +95,9 @@ A guide for reviewing code and having your code reviewed.
 
 #### Has the program been tested?
 
-* Are there unit tests available?
-* Do the unit tests cover all the important functionality of the program?
-* If we have to change some part of the program, how will we know that the
+- [ ] Are there unit tests available?
+  - [ ] Do the unit tests cover all the important functionality of the program?
+- [ ] If we have to change some part of the program, how will we know that the
   rest of it still works correctly?
 
 
@@ -115,32 +108,29 @@ A guide for reviewing code and having your code reviewed.
 > <cite>Bertrand Meyer</cite>
 
 #### Will developers be able to understand how to modify the program?
-
 * How is the functionality of the program documented?
-* Is the documentation accurate?
-* Is the documentation easy to understand?
-* Is all of the documentation contained in the source code?
+
+- [ ] Is the documentation accurate?
+- [ ] Is the documentation easy to understand?
+- [ ] Is all of the documentation contained in the source code?
 
 #### Will users be able to understand how to run the program?
 
-* Is there a usage message? Is it accurate? Is it helpful?
-* Is the rest of the user-side documentation accurate?
-* Is there enough user-side documentation?
+ - [ ] Is there a usage message? 
+   - [ ] Is it accurate? 
+   - [ ] Is it helpful?
+ - [ ] Is the rest of the user-side documentation accurate?
+ - [ ] Is there enough user-side documentation?
 
 
 ### Error Handling and Logging
-
-> <i>When you must fail, fail noisily and as soon as possible.</i>
->
-> <cite>Eric S. Raymond</cite>
-
 #### What happens when something goes wrong?
 
 * Under what circumstances will the program fail to run?
-* Are the error message informative?
-* In cases of user-error, does the user get adequate information about what he
+- [ ] Are the error message informative?
+- [ ] In cases of user-error, does the user get adequate information about what he
   or she did wrong?
-* Does the program produce a reasonable amount of logging for its function?
+- [ ] Does the program produce a reasonable amount of logging for its function?
 
 
 ### Design
@@ -153,28 +143,28 @@ A guide for reviewing code and having your code reviewed.
 
 #### Is the program flexible?
 
-* Will developers be able to modify the program to fit changing requirements?
-* Are there hard-coded data that should be modifiable?
-* Is the program sufficiently modular? Will modifications to one part of the
+- [ ] Will developers be able to modify the program to fit changing requirements?
+- [ ] Are there hard-coded data that should be modifiable?
+- [ ] Is the program sufficiently modular? Will modifications to one part of the
   program require modifications to others?
 
 #### Could the program be simpler?
 
-* Do you, the reviewer, understand what the code does?
-* Does the program reinvent the wheel?
-   * Can parts of the functionality be replaced with the standard library?
-   * Is there redundant functionality in two different programs?
-* Is all of the functionality necessary? Could parts be removed without
+- [ ] Do you, the reviewer, understand what the code does?
+- [ ] Does the program reinvent the wheel?
+   - [ ] Can parts of the functionality be replaced with the standard library?
+   - [ ] Is there redundant functionality in two different programs?
+- [ ] Is all of the functionality necessary? Could parts be removed without
   changing the performance?
-* Is the code commented?
-   * Are the comments necessary?
-   * Could the code be rewritten so that the comments aren't necessary?
+- [ ] Is the code commented?
+   - [ ] Are the comments necessary?
+   - [ ] Could the code be rewritten so that the comments aren't necessary?
 
 #### Is the code readable?
 
-* Is the code formatted according to the conventions of the language?
-* Are the formatting conventions consistent?
-* Are the variable names reasonable?
+- [ ] Is the code formatted according to the conventions of the language?
+- [ ] Are the formatting conventions consistent?
+- [ ] Are the variable names reasonable?
 
 
 [QMS_info]: http://gin.bcgsc.ca/plone/groups/quality/bioinformatics-quality-assurance/documents
