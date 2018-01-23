@@ -80,7 +80,7 @@ A guide for reviewing code and having your code reviewed.
 
 #### Does the program do what it's supposed to do?
 
-- [ ] Is the output correct?
+- [X] Is the output correct?
 - [ ] Are there circumstances under which the program will give the wrong output?
 - [ ]  What assumptions does the program make about input?
 
